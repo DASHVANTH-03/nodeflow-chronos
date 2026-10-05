@@ -1,0 +1,53 @@
+Enter Stream size: 20
+
+=== 1. RAW INCOMING STREAM ===
+Node 1 | Seq 3 | Time: 102 | Temp: 23.1888°C
+Node 1 | Seq 3 | Time: 107 | Temp: 20.5096°C
+Node 1 | Seq 1 | Time: 108 | Temp: 28.8817°C
+Node 1 | Seq 2 | Time: 115 | Temp: 24.0572°C
+Node 1 | Seq 2 | Time: 115 | Temp: 24.0572°C
+Node 2 | Seq 1 | Time: 110 | Temp: 25.4471°C
+Node 1 | Seq 3 | Time: 115 | Temp: 22.3992°C
+Node 2 | Seq 4 | Time: 112 | Temp: 31.8484°C
+Node 2 | Seq 4 | Time: 112 | Temp: 31.8484°C
+Node 2 | Seq 2 | Time: 109 | Temp: 27.8075°C
+Node 3 | Seq 2 | Time: 103 | Temp: 27.1345°C
+Node 1 | Seq 4 | Time: 110 | Temp: 26.0753°C
+Node 1 | Seq 4 | Time: 110 | Temp: 26.0753°C
+Node 2 | Seq 4 | Time: 103 | Temp: 33.4648°C
+Node 2 | Seq 4 | Time: 113 | Temp: 29.2932°C
+Node 1 | Seq 4 | Time: 115 | Temp: 33.215°C
+Node 1 | Seq 4 | Time: 115 | Temp: 33.215°C
+Node 2 | Seq 3 | Time: 100 | Temp: 32.5654°C
+Node 3 | Seq 3 | Time: 115 | Temp: 29.9764°C
+Node 1 | Seq 2 | Time: 102 | Temp: 26.2383°C
+
+=== 2. FILTERING & RE-ORDERING STAGE ===
+[DROPPED DUPLICATE] Node 1 Seq 3
+[DROPPED DUPLICATE] Node 1 Seq 2
+[DROPPED DUPLICATE] Node 1 Seq 3
+[DROPPED DUPLICATE] Node 2 Seq 4
+[DROPPED DUPLICATE] Node 1 Seq 4
+[DROPPED DUPLICATE] Node 2 Seq 4
+[DROPPED DUPLICATE] Node 2 Seq 4
+[DROPPED DUPLICATE] Node 1 Seq 4
+[DROPPED DUPLICATE] Node 1 Seq 4
+[DROPPED DUPLICATE] Node 1 Seq 2
+
+=== 3. CHRONOLOGICAL PROCESSING STAGE ===
+[PROCESSED IN-ORDER] Time: 100 | Node 2 | Temp: 32.5654°C
+[PROCESSED IN-ORDER] Time: 102 | Node 1 | Temp: 23.1888°C
+[PROCESSED IN-ORDER] Time: 103 | Node 3 | Temp: 27.1345°C
+[PROCESSED IN-ORDER] Time: 108 | Node 1 | Temp: 28.8817°C
+[PROCESSED IN-ORDER] Time: 109 | Node 2 | Temp: 27.8075°C
+[PROCESSED IN-ORDER] Time: 110 | Node 2 | Temp: 25.4471°C
+[PROCESSED IN-ORDER] Time: 110 | Node 1 | Temp: 26.0753°C
+[PROCESSED IN-ORDER] Time: 112 | Node 2 | Temp: 31.8484°C
+[PROCESSED IN-ORDER] Time: 115 | Node 3 | Temp: 29.9764°C
+[PROCESSED IN-ORDER] Time: 115 | Node 1 | Temp: 24.0572°C
+
+=== 4. FINAL STATUS BOARD (Hash Map) ===
+Sensor 3 Current Temperature: 29.9764°C
+Sensor 1 Current Temperature: 24.0572°C
+Sensor 2 Current Temperature: 31.8484°C
+
